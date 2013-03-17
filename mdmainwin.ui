@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mdmainwin</class>
+ <widget class="QMainWindow" name="mdmainwin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>579</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Computational Physics Consulting</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_settings">
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <property name="usesScrollButtons">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tab_element">
+           <attribute name="title">
+            <string>Element</string>
+           </attribute>
+           <widget class="QLabel" name="lattice_type_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>140</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Lattice type:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="sigma_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>50</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Sigma:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="epsilon_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>80</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Epsilon:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="mass_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Mass:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lattice_constant_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>170</y>
+              <width>91</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Lattice constant:</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="lattice_type_cb">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>140</y>
+              <width>81</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string extracomment="Simple cubic">SC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string extracomment="Face-centered cubic">FCC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string extracomment="Body-centered cubic">BCC</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QPushButton" name="save_element_pb">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>200</y>
+              <width>91</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Save Element...</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="load_element_pb">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>200</y>
+              <width>91</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Load Element...</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="sigma_unit_l">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>50</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Å</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="epsilon_unit_cb">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>80</y>
+              <width>81</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string extracomment="Electron Volt">eV</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string extracomment="Ergon">erg</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="lattice_constant_unit_l">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>170</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Å</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="mass_unit_l">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>110</y>
+              <width>46</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>u</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="sigma_le">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>50</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="epsilon_le">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>80</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="mass_le">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>110</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lattice_constant_le">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>170</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="element_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>91</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <italic>true</italic>
+             </font>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_environment">
+           <attribute name="title">
+            <string>Environment</string>
+           </attribute>
+           <widget class="QLabel" name="init_temperature_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>50</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Initial temperature:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="init_temperature_unit_l">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>50</y>
+              <width>101</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>K</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="num_particles_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>121</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Number of particles:</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="init_temperature_le">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>50</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="num_particles_le">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>20</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="radioButton">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>180</y>
+              <width>95</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>RadioButton</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_control">
+           <attribute name="title">
+            <string>Control</string>
+           </attribute>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>273</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>Constants</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QRadioButton" name="npe_rb">
+                 <property name="text">
+                  <string>NPE</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="nve_rb">
+                 <property name="text">
+                  <string>NVE</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="nvt_rb">
+                 <property name="text">
+                  <string>NVT</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="npt_rb">
+                 <property name="text">
+                  <string>NPT</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="constants_comment_l">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QLabel" name="desired_pressure_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>170</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Desired pressure:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="desired_temperature_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>200</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Desired temperature:</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="desired_pressure_unit_cb">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>170</y>
+              <width>81</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>Pa</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bar</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>atm</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="desired_temperature_unit_l">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>200</y>
+              <width>46</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>K</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="desire_temperature_le">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>200</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="desired_pressure_le">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>170</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_simulation">
+           <attribute name="title">
+            <string>Simulation</string>
+           </attribute>
+           <widget class="QWidget" name="widget" native="true">
+            <property name="geometry">
+             <rect>
+              <x>1</x>
+              <y>1</y>
+              <width>291</width>
+              <height>231</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QGroupBox" name="groupBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="title">
+                <string>Leapfrog integration</string>
+               </property>
+               <widget class="QLabel" name="time_step_unit_l">
+                <property name="geometry">
+                 <rect>
+                  <x>210</x>
+                  <y>30</y>
+                  <width>21</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>fs</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="time_step_l">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>30</y>
+                  <width>101</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Time step length:</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="num_time_steps_l">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>60</y>
+                  <width>131</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Number of time step:</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="time_step_le">
+                <property name="geometry">
+                 <rect>
+                  <x>120</x>
+                  <y>30</y>
+                  <width>81</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="num_time_steps_le">
+                <property name="geometry">
+                 <rect>
+                  <x>120</x>
+                  <y>60</y>
+                  <width>81</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="groupBox_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="title">
+                <string>Verlet list</string>
+               </property>
+               <widget class="QLabel" name="inner_cutoff_l">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>30</y>
+                  <width>71</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Inner cutoff:</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="outer_cutoff_l">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>60</y>
+                  <width>71</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Outer cutoff:</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="inner_cutoff_unit_l">
+                <property name="geometry">
+                 <rect>
+                  <x>170</x>
+                  <y>30</y>
+                  <width>71</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>times Sigma</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="outer_cutoff_unit_l">
+                <property name="geometry">
+                 <rect>
+                  <x>170</x>
+                  <y>60</y>
+                  <width>111</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>times inner cutoff</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="inner_cutoff_le">
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>30</y>
+                  <width>81</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="outer_cutoff_le">
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>60</y>
+                  <width>81</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_output">
+           <attribute name="title">
+            <string>Output</string>
+           </attribute>
+           <widget class="QLabel" name="measurement_interval_l">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>131</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Measurement interval:</string>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="measurement_interval_sb">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>20</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>1000000</number>
+            </property>
+            <property name="value">
+             <number>1</number>
+            </property>
+           </widget>
+           <widget class="QLabel" name="measurement_interval_timesteps_l">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>20</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>timesteps</string>
+            </property>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>50</y>
+              <width>273</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>Stored properties</string>
+            </property>
+            <widget class="QCheckBox" name="msd_cb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>120</y>
+               <width>51</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>MSD</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="energy_total_cb">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>30</y>
+               <width>101</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Energy, total</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="diffoceff_cb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>101</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Diffusion coeff.</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="energy_potential_cb">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>90</y>
+               <width>121</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Energy, potential</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="energy_kinetic_cb">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>60</y>
+               <width>111</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Energy, kinetic</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="cohesive_energy_cb">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>120</y>
+               <width>121</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Cohesive energy</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="pressure_cb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>60</y>
+               <width>71</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Pressure</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="cv_cb">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>90</y>
+               <width>41</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Cv</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QCheckBox" name="store_particle_possitions_cb">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>210</y>
+              <width>131</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Store particle positions</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QDialogButtonBox" name="settings_bb">
+            <property name="standardButtons">
+             <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+            </property>
+            <property name="centerButtons">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_simulation_2">
+       <attribute name="title">
+        <string>Simulation</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="start_simulation_pb">
+            <property name="text">
+             <string>Start Simulation</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="close_when_finished_cb">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Close when finished</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="simulation_output_tb"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_plots">
+       <attribute name="title">
+        <string>Plots</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>579</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionSave_Settings"/>
+    <addaction name="actionLoad_Settings"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About...</string>
+   </property>
+  </action>
+  <action name="actionSave_Settings">
+   <property name="text">
+    <string>Save Settings...</string>
+   </property>
+  </action>
+  <action name="actionLoad_Settings">
+   <property name="text">
+    <string>Load Settings...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>mdmainwin</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>195</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
