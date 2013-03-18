@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mdmainwin.ui'
 **
-** Created: Sun 17. Mar 23:37:56 2013
+** Created: Mon 18. Mar 23:37:08 2013
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -68,13 +68,13 @@ public:
     QLineEdit *mass_le;
     QLineEdit *lattice_constant_le;
     QLabel *element_l;
+    QWidget *myWidget;
     QWidget *tab_environment;
     QLabel *init_temperature_l;
     QLabel *init_temperature_unit_l;
     QLabel *num_particles_l;
     QLineEdit *init_temperature_le;
     QLineEdit *num_particles_le;
-    QRadioButton *radioButton;
     QWidget *tab_control;
     QGroupBox *groupBox_3;
     QHBoxLayout *horizontalLayout_4;
@@ -128,8 +128,13 @@ public:
     QPushButton *start_simulation_pb;
     QCheckBox *close_when_finished_cb;
     QSpacerItem *horizontalSpacer_2;
+    QHBoxLayout *horizontalLayout_2;
     QTextBrowser *simulation_output_tb;
     QWidget *tab_plots;
+    QWidget *tab;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout_6;
+    QSpacerItem *horizontalSpacer;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuHelp;
@@ -140,7 +145,7 @@ public:
     {
         if (mdmainwin->objectName().isEmpty())
             mdmainwin->setObjectName(QString::fromUtf8("mdmainwin"));
-        mdmainwin->resize(579, 504);
+        mdmainwin->resize(1079, 619);
         actionExit = new QAction(mdmainwin);
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
         actionAbout = new QAction(mdmainwin);
@@ -227,6 +232,9 @@ public:
         QFont font;
         font.setItalic(true);
         element_l->setFont(font);
+        myWidget = new QWidget(tab_element);
+        myWidget->setObjectName(QString::fromUtf8("myWidget"));
+        myWidget->setGeometry(QRect(430, 110, 120, 80));
         tabWidget->addTab(tab_element, QString());
         tab_environment = new QWidget();
         tab_environment->setObjectName(QString::fromUtf8("tab_environment"));
@@ -245,9 +253,6 @@ public:
         num_particles_le = new QLineEdit(tab_environment);
         num_particles_le->setObjectName(QString::fromUtf8("num_particles_le"));
         num_particles_le->setGeometry(QRect(120, 20, 81, 21));
-        radioButton = new QRadioButton(tab_environment);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
-        radioButton->setGeometry(QRect(240, 180, 95, 20));
         tabWidget->addTab(tab_environment, QString());
         tab_control = new QWidget();
         tab_control->setObjectName(QString::fromUtf8("tab_control"));
@@ -467,6 +472,12 @@ public:
 
         verticalLayout_4->addLayout(horizontalLayout_3);
 
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+
+        verticalLayout_4->addLayout(horizontalLayout_2);
+
         simulation_output_tb = new QTextBrowser(tab_simulation_2);
         simulation_output_tb->setObjectName(QString::fromUtf8("simulation_output_tb"));
 
@@ -476,13 +487,28 @@ public:
         tab_plots = new QWidget();
         tab_plots->setObjectName(QString::fromUtf8("tab_plots"));
         tabWidget_2->addTab(tab_plots, QString());
+        tab = new QWidget();
+        tab->setObjectName(QString::fromUtf8("tab"));
+        verticalLayoutWidget = new QWidget(tab);
+        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(230, 150, 160, 80));
+        verticalLayout_6 = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout_6->setSpacing(6);
+        verticalLayout_6->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        verticalLayout_6->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        verticalLayout_6->addItem(horizontalSpacer);
+
+        tabWidget_2->addTab(tab, QString());
 
         verticalLayout_2->addWidget(tabWidget_2);
 
         mdmainwin->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(mdmainwin);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 579, 26));
+        menuBar->setGeometry(QRect(0, 0, 1079, 26));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuHelp = new QMenu(menuBar);
@@ -505,8 +531,8 @@ public:
         retranslateUi(mdmainwin);
         QObject::connect(actionExit, SIGNAL(triggered()), mdmainwin, SLOT(close()));
 
-        tabWidget_2->setCurrentIndex(0);
-        tabWidget->setCurrentIndex(1);
+        tabWidget_2->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(0);
         lattice_type_cb->setCurrentIndex(0);
         desired_pressure_unit_cb->setCurrentIndex(2);
 
@@ -547,7 +573,6 @@ public:
         init_temperature_l->setText(QApplication::translate("mdmainwin", "Initial temperature:", 0, QApplication::UnicodeUTF8));
         init_temperature_unit_l->setText(QApplication::translate("mdmainwin", "K", 0, QApplication::UnicodeUTF8));
         num_particles_l->setText(QApplication::translate("mdmainwin", "Number of particles:", 0, QApplication::UnicodeUTF8));
-        radioButton->setText(QApplication::translate("mdmainwin", "RadioButton", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_environment), QApplication::translate("mdmainwin", "Environment", 0, QApplication::UnicodeUTF8));
         groupBox_3->setTitle(QApplication::translate("mdmainwin", "Constants", 0, QApplication::UnicodeUTF8));
         npe_rb->setText(QApplication::translate("mdmainwin", "NPE", 0, QApplication::UnicodeUTF8));
@@ -593,6 +618,7 @@ public:
         close_when_finished_cb->setText(QApplication::translate("mdmainwin", "Close when finished", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_simulation_2), QApplication::translate("mdmainwin", "Simulation", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_plots), QApplication::translate("mdmainwin", "Plots", 0, QApplication::UnicodeUTF8));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab), QApplication::translate("mdmainwin", "GL", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("mdmainwin", "File", 0, QApplication::UnicodeUTF8));
         menuHelp->setTitle(QApplication::translate("mdmainwin", "Help", 0, QApplication::UnicodeUTF8));
         menuSettings->setTitle(QApplication::translate("mdmainwin", "Settings", 0, QApplication::UnicodeUTF8));

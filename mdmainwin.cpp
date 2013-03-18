@@ -16,6 +16,7 @@
 // Widgets
 #include "mdmainwin.h"
 #include "ui_mdmainwin.h"
+#include "GLWidget.h"
 
 ////////////////////////////////////////////////////////////////
 // CONSTRUCTOR & DESTRUCTOR
@@ -27,6 +28,26 @@ mdmainwin::mdmainwin(QWidget *parent) :
 {
     // Set up user interface
     ui->setupUi(this);
+
+		
+		GLWidget* newGL;
+		newGL = new GLWidget;
+		ui->verticalLayout_6->addWidget(newGL);
+		newGL->resize(600,400);
+    
+		newGL->show();
+		//newGL = new GLWidget(this);
+    //newGL->show();
+		
+		
+		
+		//QWidget *glwid = ui->myWidget;
+    //glwid->resize(50,50);
+    //glwid->show();
+    
+    //setCentralWidget(newGL); 
+		
+
 
     // Set up simulation output text browser
     int font_size = 7;
@@ -45,7 +66,7 @@ mdmainwin::mdmainwin(QWidget *parent) :
     tb->setUndoRedoEnabled(false); /* Don't allow undo */
     tb->setWordWrapMode(QTextOption::WrapAnywhere); /* Use all characters places on each line */
 
-    // Start simulation directly when application has finished loading
+	  // Start simulation directly when application has finished loading
     QTimer::singleShot(0, this, SLOT(on_start_simulation_pb_clicked()));
 }
 
