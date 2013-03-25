@@ -3,6 +3,8 @@
 
 GLWidget::GLWidget(QWidget *parent) : QGLWidget(parent) {
     setMouseTracking(true);
+    red=1;
+    green=0;
 }
 
 void GLWidget::initializeGL() {
@@ -26,13 +28,19 @@ void GLWidget::resizeGL(int w, int h) {
 
 void GLWidget::paintGL() {
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1,0,0);
+    glColor3f(red,green,0);
     glBegin(GL_POLYGON);
     glVertex2f(0,0);
     glVertex2f(100,500);
     glVertex2f(500,100);
     glEnd();
 }
+
+void GLWidget::paintGLGreen() {
+    red=0;
+		green=1;
+}
+
 
 void GLWidget::mousePressEvent(QMouseEvent *event) {
 

@@ -9,6 +9,8 @@
 // Own includes
 //#include "mdsystem.h"
 //#include "settings.h"
+#include "CSimulation.hpp"
+#include "GLWidget.h"
 
 // Qt includes
 #include <QMainWindow>
@@ -90,6 +92,8 @@ private:
 
 private:
     Ui::mdmainwin *ui;
+    GLWidget* simGL;
+    CSimulation* simulation;
 
 };
 

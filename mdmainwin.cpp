@@ -17,6 +17,7 @@
 #include "mdmainwin.h"
 #include "ui_mdmainwin.h"
 #include "GLWidget.h"
+#include "CSimulation.hpp"
 
 ////////////////////////////////////////////////////////////////
 // CONSTRUCTOR & DESTRUCTOR
@@ -30,12 +31,12 @@ mdmainwin::mdmainwin(QWidget *parent) :
     ui->setupUi(this);
 
 		
-		GLWidget* newGL;
-		newGL = new GLWidget;
-		ui->verticalLayout_6->addWidget(newGL);
-		newGL->resize(600,400);
+		
+		simGL = new GLWidget;
+		ui->verticalLayout_6->addWidget(simGL);
+		simGL->resize(600,400);
     
-		newGL->show();
+		simGL->show();
 		//newGL = new GLWidget(this);
     //newGL->show();
 		
@@ -67,11 +68,14 @@ mdmainwin::mdmainwin(QWidget *parent) :
     tb->setWordWrapMode(QTextOption::WrapAnywhere); /* Use all characters places on each line */
 
 	  // Start simulation directly when application has finished loading
-    QTimer::singleShot(0, this, SLOT(on_start_simulation_pb_clicked()));
+    //QTimer::singleShot(0, this, SLOT(on_start_simulation_pb_clicked()));
 }
 
 mdmainwin::~mdmainwin()
 {
+    
+    delete simGL;
+    delete simulation;
     delete ui;
 }
 
@@ -81,7 +85,9 @@ mdmainwin::~mdmainwin()
 
 void mdmainwin::on_start_simulation_pb_clicked()
 {
-  
+		simulation = new CSimulation(simGL);
+		std::cout << "Start Simulation Clicked\n";
+		ui->statusbar->showMessage("Start Simulation Clicked");
 }
 
 void mdmainwin::closeEvent(QCloseEvent *event)

@@ -542,7 +542,7 @@ public:
 
     void retranslateUi(QMainWindow *mdmainwin)
     {
-        mdmainwin->setWindowTitle(QApplication::translate("mdmainwin", "Computational Physics Consulting", 0, QApplication::UnicodeUTF8));
+        mdmainwin->setWindowTitle(QApplication::translate("mdmainwin", "QThelloWorld", 0, QApplication::UnicodeUTF8));
         actionExit->setText(QApplication::translate("mdmainwin", "Exit", 0, QApplication::UnicodeUTF8));
         actionAbout->setText(QApplication::translate("mdmainwin", "About...", 0, QApplication::UnicodeUTF8));
         actionSave_Settings->setText(QApplication::translate("mdmainwin", "Save Settings...", 0, QApplication::UnicodeUTF8));

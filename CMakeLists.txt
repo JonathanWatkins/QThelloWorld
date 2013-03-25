@@ -21,9 +21,9 @@ find_package(OpenGL REQUIRED)
 # - Set some definitions
 add_definitions(${QT_DEFINITIONS})
 
-set(QThelloWorld_SOURCES QThelloWorld.cpp mdmainwin.cpp GLWidget.cpp)
+set(QThelloWorld_SOURCES QThelloWorld.cpp mdmainwin.cpp GLWidget.cpp CSimulation.cpp)
 
-set(QThelloWorld_HEADERS mdmainwin.h ui_mdmainwin.h GLWidget.h)
+set(QThelloWorld_HEADERS mdmainwin.h ui_mdmainwin.h GLWidget.h CSimulation.hpp)
 
 QT4_WRAP_CPP(QThelloWorld_HEADERS_MOC ${QThelloWorld_HEADERS})
 
